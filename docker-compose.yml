@@ -1,0 +1,22 @@
+version: "3"
+services:
+  mongo:
+    image: mongo
+    ports:
+     - "27017:27017"
+    networks:
+      - webnet
+  assessment-api:
+    image: shubhamasthana/marketplace:form-assesment-api
+    depends_on:
+      - mongo
+    ports:
+      - "8080:8080"
+    networks:
+      - webnet
+    environment:
+      mongourl: mongodb://mongo:27017
+      PORT: 8080
+networks:
+  webnet:
+    driver: bridge

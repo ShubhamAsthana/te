@@ -1,0 +1,28 @@
+{
+  "name": "dwjt-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "tsc && node ./bin/www",
+    "tsc": "tsc",
+    "dev": "ts-node-dev --respawn --transpileOnly ./app.ts",
+    "prod": "tsc && node ./build/app.js"
+  },
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "http-errors": "~1.6.2",
+    "jade": "^1.11.0",
+    "mongoose": "^5.4.10",
+    "morgan": "^1.9.1",
+    "properties-reader": "0.0.16",
+    "swagger-jsdoc": "^3.3.0",
+    "swagger-ui-express": "^4.0.7",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "typescript": "^3.3.3"
+  }
+}
